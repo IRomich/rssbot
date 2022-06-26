@@ -1,0 +1,12 @@
+[Unit]
+Description=RSS Telegram bot service
+After=network.target
+User=root
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=python3 /root/rssbot/bot.py
+
+[Install]
+WantedBy=multi-user.target
